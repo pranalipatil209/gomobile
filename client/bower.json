@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "description": "myApp using angular2",
+  "main": "",
+  "authors": [
+    "pranalipatil209 <pranalipatil209@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lokeshkumarpedda/AppyStore-BLZ",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,39 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RouterModule, Routes, Router } from '@angular/router';
+import { Http, Response, Request, RequestMethod } from '@angular/http';
+
+@Component({
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
+})
+export class SignupComponent{
+	
+	signUpForm : FormGroup;
+
+	constructor(fb: FormBuilder, public http: Http ,private router: Router) {
+
+		this.signUpForm = fb.group({
+			'name' : [null, Validators.required],
+			'email' : [null,Validators.required],
+			'mobile' : [null, Validators.compose([Validators.required, Validators.minLength(10),Validators.minLength(10)])],
+			'password' : [null, Validators.compose([Validators.required, Validators.minLength(8)])]
+		})
+	}
+
+	submitForm(value:any):void{
+		console.log('Form Data : ');
+		console.log(value);
+
+		this.http.post('http://localhost:3000/api/signup',value).subscribe(
+		(res:any)=>{
+			let data = res.json();
+			console.log(data);
+			this.router.navigate(['/login']);
+		})
+	}
+ 
+  }
+
+

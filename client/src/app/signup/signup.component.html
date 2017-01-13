@@ -1,0 +1,32 @@
+<div class="bag">
+<div class="container-fluid contains">
+	<div class="signupDiv">
+		<h3 class="text-center">Signup</h3>
+		<div class="SignForm">
+			<form [formGroup]="signUpForm" (ngSubmit)="submitForm(signUpForm.value)">
+				<div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['name'].valid && !signUpForm.controls['name'].touched}">
+					<input class="form-control" type="text" name="name" placeholder="name" [formControl]="signUpForm.controls['name']" required>
+				</div>
+
+				<div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['email'].valid && !signUpForm.controls['email'].touched}">
+					<input class="form-control" type="email" name="email" [formControl]="signUpForm.controls['email']" placeholder="email" required>
+				</div>
+
+				<div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['mobile'].valid && !signUpForm.controls['mobile'].touched}">
+					<input class="form-control" type="text" name="mobile" [formControl]="signUpForm.controls['mobile']" placeholder="mobile" required>
+				</div>
+
+				<div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['password'].valid && !signUpForm.controls['password'].touched}">
+					<input class="form-control" type="password" name="password" [formControl]="signUpForm.controls['password']" placeholder="password" required>
+				</div>
+
+				<div class="form-group">
+					<button class="btn-block btn-primary buttn" [disabled]="!signUpForm.valid" type="submit">Register</button>
+				</div>
+				<div class="danger" *ngIf="!signUpForm.controls['password'].valid">Password should contain minimum 8 characters!</div>
+				<div class="danger" *ngIf="!signUpForm.controls['mobile'].valid">Mobile should have 10 digits!</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>

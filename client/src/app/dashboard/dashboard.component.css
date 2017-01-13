@@ -1,0 +1,35 @@
+@import url(../../styles.css);
+.navbar-inverse .navbar-collapse {
+  background-color: black;
+}
+
+a.navbar-brand{
+  font-family: MyriadPro-Light;
+  font-weight: 400;
+  font-size: 22px;
+  color : white;
+}
+a.navbar-brand:hover{
+  color : greenyellow;
+}
+
+.contain { 
+  margin-top: 40px;
+}
+
+@media screen and (max-width:768px) {
+  a.navbar-brand{
+    font-size: 18px;
+  }
+  nav{
+    height: 50px;
+  }
+}
+@media screen and (max-width:480px) {
+  a.navbar-brand{
+    font-size: 14px;
+  }
+  nav{
+    height: 50px;
+  }
+}
