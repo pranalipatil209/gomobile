@@ -23,7 +23,7 @@ export class LoginComponent {
 	submitForm(value:any):void{
 		console.log('Login Form ',value);
 		
-		this.http.post('http://localhost:3000/api/login', value).subscribe(
+		this.http.post('https://choco-lava.herokuapp.com/api/login', value).subscribe(
 		(res:any)=>{
 			let data = res.json();
 			console.log('Login Successful ',data._token);

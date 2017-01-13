@@ -26,7 +26,7 @@ export class SignupComponent{
 		console.log('Form Data : ');
 		console.log(value);
 
-		this.http.post('http://localhost:3000/api/signup',value).subscribe(
+		this.http.post('https://choco-lava.herokuapp.com/api/signup',value).subscribe(
 		(res:any)=>{
 			let data = res.json();
 			console.log(data);

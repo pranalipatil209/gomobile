@@ -48,3 +48,10 @@ button:hover {
 	background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
 	color: white;
 }
+
+@media screen and (max-width:768px) {
+	  .myrow {
+		top : 50%;
+	}
+}
+
