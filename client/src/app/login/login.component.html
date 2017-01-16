@@ -4,7 +4,7 @@
 		<h3 class="text-center">Login</h3>
 		<div class="LoginForm">
 			<form [formGroup]="loginForm" novalidate (ngSubmit)="submitForm(loginForm.value)">
-				
+
 				<div class="form-group" [ngClass]="{'has-error':!loginForm.controls['email'].valid && !loginForm.controls['email'].touched}">
 					<input class="form-control" type="email" name="email" [formControl]="loginForm.controls['email']" placeholder="email" required>
 				</div>
@@ -19,6 +19,7 @@
 						<span *ngIf="hide!=show">Loading...</span>
 					</button>
 				</div>
+        <div class="danger" #errorLogin></div>
 				<div class="danger" *ngIf="!loginForm.controls['email'].valid">Invalid email!</div>
 				<div class="danger" *ngIf="!loginForm.controls['password'].valid">Invalid Password!</div>
 			</form>

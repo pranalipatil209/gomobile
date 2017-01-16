@@ -1,7 +1,7 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { Http, Response, Request, RequestMethod } from '@angular/http';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-	
+
 	hide : '1';
 	show : '0';
 	loginForm : FormGroup;
-
+  hello : "hello";
 	constructor(fb: FormBuilder, private router:Router, public http: Http) {
 
 		this.loginForm = fb.group({
@@ -22,16 +22,25 @@ export class LoginComponent {
 		})
 	}
 
+	@ViewChild('errorLogin') errorLogin: ElementRef;
+
 	submitForm(value:any):void{
 		console.log('Login Form ',value);
-		
+
 		this.http.post('https://choco-lava.herokuapp.com/api/login', value).subscribe(
 		(res:any)=>{
 			let data = res.json();
-			console.log('Login Successful ',data._token);
-			this.router.navigate(['/home']);
-			console.log(localStorage.setItem('token',data._token));
+			console.log(data);
+			if(data.success){
+        console.log('Login Successful ',data._token);
+        this.router.navigate(['/home']);
+        console.log(localStorage.setItem('token',data._token));
+      }
+			else{
+        this.errorLogin.nativeElement.innerHTML = data.message;
+        alert(data.message);
+      }
 		})
-		
+
 	}
 }
