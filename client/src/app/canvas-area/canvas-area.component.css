@@ -12,8 +12,9 @@
 	margin: auto;
 	width: 300px;
 	font-size: 72px;
-  	background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
-  	background: gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
+  	background: -webkit-linear-gradient(left top, right top, #12E8DD, #13CDFF);
+	background: -moz-linear-gradient(left top, right top, #12E8DD, #13CDFF);
+	background: linear-gradient(to bottom right, #12E8DD, #13CDFF);
   	-webkit-background-clip: text;
   	background-clip: text;
   	text-fill-color: transparent;
@@ -45,7 +46,9 @@ button {
 }
 
 button:hover {
-	background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
+	background: -webkit-linear-gradient(left top, right top, #12E8DD, #13CDFF);
+	background: -moz-linear-gradient(left top, right top, #12E8DD, #13CDFF);
+	background: linear-gradient(to bottom right, #12E8DD, #13CDFF);
 	color: white;
 }
 

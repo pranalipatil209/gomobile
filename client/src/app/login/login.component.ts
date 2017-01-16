@@ -9,7 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+	
+	hide : '1';
+	show : '0';
 	loginForm : FormGroup;
 
 	constructor(fb: FormBuilder, private router:Router, public http: Http) {

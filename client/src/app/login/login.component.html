@@ -14,7 +14,10 @@
 				</div>
 
 				<div class="form-group">
-					<button class="btn-block btn-success buttn" [disabled]="!loginForm.valid" type="submit">Login</button>
+					<button class="btn-block btn-success buttn" [disabled]="!loginForm.valid" type="submit">
+						<span *ngIf="hide==show">Login</span>
+						<span *ngIf="hide!=show">Loading...</span>
+					</button>
 				</div>
 				<div class="danger" *ngIf="!loginForm.controls['email'].valid">Invalid email!</div>
 				<div class="danger" *ngIf="!loginForm.controls['password'].valid">Invalid Password!</div>
