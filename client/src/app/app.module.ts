@@ -5,10 +5,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CanvasAreaComponent } from './canvas-area/canvas-area.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
-import { CanvasAreaComponent } from './canvas-area/canvas-area.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -16,7 +17,7 @@ const appRoutes : Routes = [
     { path : 'login' , component : LoginComponent },
     { path : 'home' , component : DashboardComponent }
 
-]; 
+];
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ const appRoutes : Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers : [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

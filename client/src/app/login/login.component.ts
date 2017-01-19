@@ -2,19 +2,19 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { Http, Response, Request, RequestMethod } from '@angular/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers : [AuthService]
 })
-export class LoginComponent {
+export class LoginComponent{
 
-	hide : '1';
-	show : '0';
-	loginForm : FormGroup;
-  hello : "hello";
-	constructor(fb: FormBuilder, private router:Router, public http: Http) {
+  loginForm : FormGroup;
+
+	constructor(fb: FormBuilder, private router:Router, public http: Http, private auth:AuthService) {
 
 		this.loginForm = fb.group({
 			'email' : [null, Validators.required],
@@ -22,25 +22,20 @@ export class LoginComponent {
 		})
 	}
 
-	@ViewChild('errorLogin') errorLogin: ElementRef;
+  @ViewChild('errorLogin') errorLogin: ElementRef;
 
-	submitForm(value:any):void{
-		console.log('Login Form ',value);
-
-		this.http.post('https://choco-lava.herokuapp.com/api/login', value).subscribe(
-		(res:any)=>{
-			let data = res.json();
-			console.log(data);
-			if(data.success){
-        console.log('Login Successful ',data._token);
-        this.router.navigate(['/home']);
-        console.log(localStorage.setItem('token',data._token));
-      }
-			else{
-        this.errorLogin.nativeElement.innerHTML = data.message;
-        alert(data.message);
-      }
-		})
-
-	}
+	submitForm(value:any):void {
+      console.log('Login Form ',value);
+      this.auth.getData('login',value)
+          .subscribe(res=>{
+              console.log(res);
+              if(res.success){
+                  this.router.navigate(['/home'])
+              }
+              else{
+                this.errorLogin.nativeElement.innerHTML = res.message;
+                alert(res.message);
+              }
+          });
+  }
 }
