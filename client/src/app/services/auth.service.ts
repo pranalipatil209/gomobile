@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import { Router, Route } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
 
-  constructor(private http:Http) { }
+  constructor(private http:Http, private router:Router) { }
 
   private url = "https://choco-lava.herokuapp.com/api/";
 
-  getData(user,d): Observable<any>{
+  login(user,d): Observable<any>{
       let response =  this.http.post(this.url+user,d)
           .map((res:any)=>{
               let data=res.json();
@@ -22,5 +22,37 @@ export class AuthService {
       console.log(response);
       return response;
   }
+
+  isAuthenticated(){
+      if(localStorage.getItem('token')){
+          return true;
+      }
+  }
+
+  loginRequired(): Promise<any>{
+    if(this.isAuthenticated()) {
+      console.log('Authenticated');
+      return Promise.resolve();
+    }
+    else {
+      this.router.navigate(['/login']);
+      return Promise.resolve();
+    }
+  }
+
+  skipIfLoggedIn(): void{
+      if(this.isAuthenticated())
+          this.router.navigate(['/home']);
+      else
+        this.router.navigate(['/login']);
+  }
+
+  logout(): void{
+      window.onpopstate = function (e) { window.history.forward(0); };
+      localStorage.removeItem('token');
+      this.router.navigate(['']);
+
+  }
+
 
 }

@@ -9,13 +9,14 @@ import { CanvasAreaComponent } from './canvas-area/canvas-area.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { AuthService } from './services/auth.service'
+import { LoginRequireResolver } from './resolver/login-require.service';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
     { path : 'signup' , component : SignupComponent },
     { path : 'login' , component : LoginComponent },
-    { path : 'home' , component : DashboardComponent }
+    { path : 'home' , component : DashboardComponent , resolve : { loginRequire : LoginRequireResolver }}
 
 ];
 
@@ -34,7 +35,7 @@ const appRoutes : Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers : [],
+  providers : [AuthService, LoginRequireResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
