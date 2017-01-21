@@ -23,10 +23,19 @@
  	border: 0px solid;
  }
 
- .danger { 
+ .danger {
  	text-align: center;
  	font-size: 11px;
  	color: red;
  }
 
+.loader {
+  margin: auto;
+}
 
+.loaderImg {
+  margin-left: 45%;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+}

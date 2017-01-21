@@ -9,8 +9,9 @@ import { Http, Response, Request, RequestMethod } from '@angular/http';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent{
-	
+
 	signUpForm : FormGroup;
+	private load = false;
 
 	constructor(fb: FormBuilder, public http: Http ,private router: Router) {
 
@@ -23,17 +24,19 @@ export class SignupComponent{
 	}
 
 	submitForm(value:any):void{
+	  this.load = true;
 		console.log('Form Data : ');
 		console.log(value);
 
 		this.http.post('https://choco-lava.herokuapp.com/api/signup',value).subscribe(
 		(res:any)=>{
+		  this.load = false;
 			let data = res.json();
 			console.log(data);
 			this.router.navigate(['/login']);
 		})
 	}
- 
+
   }
 
 

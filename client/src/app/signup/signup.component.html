@@ -23,6 +23,9 @@
 				<div class="form-group">
 					<button class="btn-block btn-primary buttn" [disabled]="!signUpForm.valid" type="submit">Register</button>
 				</div>
+        <div class="loader" *ngIf="load==true">
+          <img class="loaderImg" src="../../assets/load.gif">
+        </div>
 				<div class="danger" *ngIf="!signUpForm.controls['password'].valid">Password should contain minimum 8 characters!</div>
 				<div class="danger" *ngIf="!signUpForm.controls['mobile'].valid">Mobile should have 10 digits!</div>
 			</form>

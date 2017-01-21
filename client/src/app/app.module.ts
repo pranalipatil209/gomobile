@@ -9,8 +9,10 @@ import { CanvasAreaComponent } from './canvas-area/canvas-area.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { sidebarComponent } from './sidebar/sidebar.component';
 import { AuthService } from './services/auth.service'
 import { LoginRequireResolver } from './resolver/login-require.service';
+// import { ProductComponent } from './product/product.component';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -26,7 +28,8 @@ const appRoutes : Routes = [
     SignupComponent,
     LoginComponent,
     CanvasAreaComponent,
-    DashboardComponent
+    DashboardComponent,
+    sidebarComponent
   ],
   imports: [
     BrowserModule,
