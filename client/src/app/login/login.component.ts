@@ -34,13 +34,13 @@ export class LoginComponent implements OnInit{
       this.auth.login('login',value)
           .subscribe(res=>{
               this.load = false;
-              console.log(res);
-              if(res.success){
-                  this.router.navigate(['/home'])
+              if(res.result.success){
+                  console.log('hello');
+                  this.router.navigate(['/home']);
               }
               else{
-                this.errorLogin.nativeElement.innerHTML = res.message;
-                alert(res.message);
+                this.errorLogin.nativeElement.innerHTML = res.result.message;
+                alert(res.result.message);
               }
           });
   }

@@ -9,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class product {
   id : number;
   name : string;
-  manufacturer : string;
-  storage : string;
-  os : string;
-  camera : number;
-  img : string;
+  price : number;
+  rating : number;
   description : string;
+  image : {
+    large : string,
+    small : string
+  };
+  specs : {
+    manufacturer : string,
+    storage : string,
+    os : string,
+    camera : number
+  };
 }
 
 export class ProductComponent implements OnInit {

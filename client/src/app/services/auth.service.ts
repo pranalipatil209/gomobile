@@ -10,13 +10,16 @@ export class AuthService {
   constructor(private http:Http, private router:Router) { }
 
   private url = "https://choco-lava.herokuapp.com/api/";
+  // private url = "http://localhost:3000/api/";
+
 
   login(user,d): Observable<any>{
       let response =  this.http.post(this.url+user,d)
           .map((res:any)=>{
               let data=res.json();
-              if(data.success)
-                  localStorage.setItem('token',data._token);
+              console.log(data);
+              if(data.result.success)
+                  localStorage.setItem('token',data.result._token);
               return data;
           });
       console.log(response);
