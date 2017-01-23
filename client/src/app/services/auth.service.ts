@@ -39,7 +39,6 @@ export class AuthService {
     }
     else {
       this.router.navigate(['/login']);
-      return Promise.resolve();
     }
   }
 
