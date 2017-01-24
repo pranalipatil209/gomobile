@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit{
 
   loginForm : FormGroup;
   public load = false;
-
 	constructor(fb: FormBuilder, private router:Router, public http: Http, private auth:AuthService) {
     this.loginForm = fb.group({
 			'email' : [null, Validators.required],
@@ -35,7 +34,8 @@ export class LoginComponent implements OnInit{
           .subscribe(res=>{
               this.load = false;
               if(res.result.success){
-                  console.log('hello');
+                  let prod = JSON.stringify(res.data);
+                  localStorage.setItem('prod',prod);
                   this.router.navigate(['/home']);
               }
               else{
