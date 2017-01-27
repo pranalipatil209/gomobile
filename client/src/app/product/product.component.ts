@@ -29,7 +29,6 @@ export class MyProduct implements OnInit {
     "large": ".././assets/iphone6-large.jpg"
   }
 };
-
   ngOnInit() {
 
   }
