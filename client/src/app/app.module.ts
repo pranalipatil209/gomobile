@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { sidebarComponent } from './sidebar/sidebar.component';
 import { AuthService } from './services/auth.service'
 import { LoginRequireResolver } from './resolver/login-require.service';
-// import { ProductComponent } from './product/product.component';
+import { MyProduct } from './product/product.component';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -29,7 +29,8 @@ const appRoutes : Routes = [
     LoginComponent,
     CanvasAreaComponent,
     DashboardComponent,
-    sidebarComponent
+    sidebarComponent,
+    MyProduct
   ],
   imports: [
     BrowserModule,

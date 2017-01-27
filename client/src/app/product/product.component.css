@@ -1,0 +1,23 @@
+.product {
+  height : 400px;
+  width : 320px;
+  box-shadow: 1px 2px 4px gray;
+  overflow: auto;
+}
+
+.image {
+  padding: 10px;
+  height : 180px;
+  width : 300px;
+}
+
+.image > img {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.content {
+  padding: 10px;
+}
