@@ -6,10 +6,10 @@
       <span *ngFor="let content of item.content">
         <input type="checkbox" name="item.head" value="content"
                (change)="checkedC(item.head,content)" class="checked" id={{content}}>{{content}}<br>
-      </span><br>
+      </span>
     </div>
-
-    <button class="btn btn-block btn-primary" type="reset" (click)="clearA()">Clear All</button>
+      <br>
+      <button class="btn btn-block btn-primary" type="reset" (click)="clearAll()">Clear All</button>
     </form>
   </div>
 </div>

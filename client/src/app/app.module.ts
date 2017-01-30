@@ -13,6 +13,7 @@ import { sidebarComponent } from './sidebar/sidebar.component';
 import { AuthService } from './services/auth.service'
 import { LoginRequireResolver } from './resolver/login-require.service';
 import { MyProduct } from './product/product.component';
+import { KeysPipe } from './pipes/keys.pipe';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -30,7 +31,8 @@ const appRoutes : Routes = [
     CanvasAreaComponent,
     DashboardComponent,
     sidebarComponent,
-    MyProduct
+    MyProduct,
+    KeysPipe
   ],
   imports: [
     BrowserModule,

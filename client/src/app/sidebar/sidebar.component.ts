@@ -32,9 +32,11 @@ export class sidebarComponent {
       OS:[],
       Camera:[]
     };
+
     getProperty(filter){
       return this.pp[filter];
     }
+
     checkedC(filter,val){
         console.log(filter,val);
         let key = this.getProperty(filter);
@@ -49,7 +51,7 @@ export class sidebarComponent {
         }
         console.log(this.pp);
     }
-    clearA(){
+    clearAll(){
         this.pp = {
           Manufacturer:[],
           Storage:[],

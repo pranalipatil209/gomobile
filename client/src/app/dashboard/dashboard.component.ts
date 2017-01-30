@@ -12,10 +12,8 @@ export class DashboardComponent{
 
   constructor(private router: Router, private auth:AuthService) { }
 
-  getD():void{
-    let data = JSON.parse(localStorage.getItem('prod'));
-    console.log('data from service in dashboard :: ',data);
-  }
+  public data = JSON.parse(localStorage.getItem('prod'));
+
 
   logout():void{
   	  console.log('log out');
