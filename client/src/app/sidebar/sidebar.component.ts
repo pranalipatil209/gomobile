@@ -49,7 +49,7 @@ export class sidebarComponent {
                 key.splice(uncheck,1);
             }
         }
-        console.log(this.pp);
+        localStorage.setItem('filter',JSON.stringify(this.pp));
     }
     clearAll(){
         this.pp = {
@@ -57,6 +57,8 @@ export class sidebarComponent {
           Storage:[],
           OS:[],
           Camera:[]
-        }
+        };
+        localStorage.setItem('filter',JSON.stringify(this.pp));
+
     }
 }

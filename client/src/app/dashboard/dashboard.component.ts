@@ -13,6 +13,7 @@ export class DashboardComponent{
   constructor(private router: Router, private auth:AuthService) { }
 
   public data = JSON.parse(localStorage.getItem('prod'));
+  public filt = localStorage.getItem('filter');
 
 
   logout():void{

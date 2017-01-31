@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit{
   @ViewChild('errorLogin') errorLogin: ElementRef;
 
 	submitForm(value:any):void {
-      this.load = true;
+	    this.load = true;
       console.log('Login Form ',value);
       this.auth.login('login',value)
           .subscribe(res=>{

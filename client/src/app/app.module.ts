@@ -14,6 +14,7 @@ import { AuthService } from './services/auth.service'
 import { LoginRequireResolver } from './resolver/login-require.service';
 import { MyProduct } from './product/product.component';
 import { KeysPipe } from './pipes/keys.pipe';
+import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -32,7 +33,8 @@ const appRoutes : Routes = [
     DashboardComponent,
     sidebarComponent,
     MyProduct,
-    KeysPipe
+    KeysPipe,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,
