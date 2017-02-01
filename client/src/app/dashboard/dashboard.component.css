@@ -34,3 +34,8 @@ a.navbar-brand:hover{
     height: 50px;
   }
 }
+@media screen and (min-width:501px) and (max-width:780px) {
+  .contain {
+    padding-left: 50px;
+  }
+}

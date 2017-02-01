@@ -1,12 +1,16 @@
 import {Component} from '@angular/core';
+import { SharedataService } from '../services/sharedata.service';
 
 @Component({
     selector: 'sidebar',
     templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.css']
+    styleUrls: ['./sidebar.component.css'],
+    providers : [ SharedataService ]
 })
 
 export class sidebarComponent {
+
+   constructor (private share:SharedataService) {}
    public data = [
         {
           head: 'Manufacturer',
@@ -37,6 +41,10 @@ export class sidebarComponent {
       return this.pp[filter];
     }
 
+    setProperty(value){
+      this.share.setData(JSON.stringify(value));
+    }
+
     checkedC(filter,val){
         console.log(filter,val);
         let key = this.getProperty(filter);
@@ -49,7 +57,7 @@ export class sidebarComponent {
                 key.splice(uncheck,1);
             }
         }
-        localStorage.setItem('filter',JSON.stringify(this.pp));
+        this.setProperty(this.pp);
     }
     clearAll(){
         this.pp = {
@@ -58,7 +66,6 @@ export class sidebarComponent {
           OS:[],
           Camera:[]
         };
-        localStorage.setItem('filter',JSON.stringify(this.pp));
-
+        this.setProperty(this.pp);
     }
 }

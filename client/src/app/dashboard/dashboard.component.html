@@ -22,10 +22,9 @@
   <div class="col-xs-2">
     <sidebar></sidebar>
   </div>
-  <div class="col-xs-10">
+  <div class="col-xs-9">
     <div class="contain">
-      <!--<h1>Welcome! Its Dashboard...</h1>-->
-      <product-card *ngFor="let product of data" [prod]=" product | categoryFilter : filt "></product-card>
+      <product-card *ngFor="let product of data" [prod]=" product | categoryFilter : filterBy() "></product-card>
     </div>
 
   </div>

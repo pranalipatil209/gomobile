@@ -15,6 +15,7 @@ import { LoginRequireResolver } from './resolver/login-require.service';
 import { MyProduct } from './product/product.component';
 import { KeysPipe } from './pipes/keys.pipe';
 import { CategoryFilterPipe } from './pipes/category-filter.pipe';
+import { OnlyKeysPipe } from './pipes/only-keys.pipe';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -34,7 +35,8 @@ const appRoutes : Routes = [
     sidebarComponent,
     MyProduct,
     KeysPipe,
-    CategoryFilterPipe
+    CategoryFilterPipe,
+    OnlyKeysPipe
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'keys'
+  name: 'onlyKeys'
 })
-export class KeysPipe implements PipeTransform {
+export class OnlyKeysPipe implements PipeTransform {
 
   transform(value: any): any {
     let keys = [];
     for( let key in value ){
-      keys.push({key: key, value : value[key]});
+      keys.push(key);
     }
     return keys;
   }
+
 
 }

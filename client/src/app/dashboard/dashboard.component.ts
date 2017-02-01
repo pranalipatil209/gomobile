@@ -1,20 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import {SharedataService} from "../services/sharedata.service";
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  providers: [AuthService]
+  providers: [AuthService, SharedataService]
 })
 export class DashboardComponent{
 
-  constructor(private router: Router, private auth:AuthService) { }
+  constructor(private router: Router, private auth:AuthService, public share:SharedataService) { }
 
   public data = JSON.parse(localStorage.getItem('prod'));
-  public filt = localStorage.getItem('filter');
 
+
+  filterBy():any{
+      return this.share.getData();
+  }
 
   logout():void{
   	  console.log('log out');
