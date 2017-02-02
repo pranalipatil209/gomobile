@@ -46,7 +46,6 @@ export class sidebarComponent {
     }
 
     checkedC(filter,val){
-        console.log(filter,val);
         let key = this.getProperty(filter);
         if ((<HTMLInputElement>document.getElementById(val)).checked === true) {
             key.push(val);

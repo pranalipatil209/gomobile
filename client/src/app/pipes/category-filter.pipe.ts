@@ -9,23 +9,22 @@ export class CategoryFilterPipe implements PipeTransform {
   filterByArray = [];
 
   public filter(filterby,data){
-    console.log('inside filter',filterby);
     let prod = [];
+    let products = data;
     for(let i in filterby){
-      console.log('filter by ',filterby[i]);
       for(let j in filterby[i]){
-        console.log('oooooo',filterby[i]);
-        data.forEach(function (element) {
+        products.forEach(function (element) {
           if(filterby[i][j] == element.specs[i])
             prod.push(element);
-        })
+        });
+        products = prod;
+        prod = [];
       }
     }
-    return prod;
+    return products;
   }
 
   transform(products: any[], args: string): any {
-    console.log(products);
     let filterby = JSON.parse(args);
     let prod = [];
     let keys = new OnlyKeysPipe().transform(filterby);

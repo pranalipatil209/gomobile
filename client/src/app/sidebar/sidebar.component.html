@@ -5,7 +5,7 @@
       <h4>{{item.head}}</h4>
       <span *ngFor="let content of item.content">
         <input type="checkbox" name="item.head" value="content"
-               (change)="checkedC(item.head,content)" class="checked" id={{content}}>{{content}}<br>
+               (change)="checkedC(item.head,content)" class="checked" id={{content}}>&nbsp;&nbsp;&nbsp;{{content}}<br>
       </span>
     </div>
       <br>
