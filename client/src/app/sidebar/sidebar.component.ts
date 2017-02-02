@@ -13,28 +13,28 @@ export class sidebarComponent {
    constructor (private share:SharedataService) {}
    public data = [
         {
-          head: 'Manufacturer',
-          content: [' Apple', ' Samsung', ' HTC', ' Nokia', ' Sony']
+          head: 'manufacturer',
+          content: ['Apple', 'Samsung', 'HTC', 'Nokia', 'Sony']
         },
         {
-          head: 'Storage',
-          content: [' 16 GB', ' 32 GB']
+          head: 'storage',
+          content: ['16', '32']
         },
         {
-          head: 'OS',
-          content: [' Android', ' iOS', ' Windows']
+          head: 'os',
+          content: ['Android', 'iOS', 'Windows']
         },
         {
-          head: 'Camera',
-          content: [' 5 Mpx', ' 8 Mpx', ' 12 Mpx', ' 15 Mpx']
+          head: 'camera',
+          content: ['5', '8', '12', '15']
         }
    ];
 
     public pp = {
-      Manufacturer:[],
-      Storage:[],
-      OS:[],
-      Camera:[]
+      manufacturer:[],
+      storage:[],
+      os:[],
+      camera:[]
     };
 
     getProperty(filter){
@@ -61,10 +61,10 @@ export class sidebarComponent {
     }
     clearAll(){
         this.pp = {
-          Manufacturer:[],
-          Storage:[],
-          OS:[],
-          Camera:[]
+          manufacturer:[],
+          storage:[],
+          os:[],
+          camera:[]
         };
         this.setProperty(this.pp);
     }

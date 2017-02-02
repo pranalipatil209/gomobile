@@ -24,7 +24,7 @@
   </div>
   <div class="col-xs-9">
     <div class="contain">
-      <product-card *ngFor="let product of data" [prod]=" product | categoryFilter : filterBy() "></product-card>
+      <product-card *ngFor="let product of data | categoryFilter : filterBy()" [prod]="product"></product-card>
     </div>
 
   </div>
