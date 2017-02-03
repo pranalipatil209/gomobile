@@ -8,7 +8,8 @@
         <table>
           <tr *ngFor="let spec of prod.specs | keys">
             <td><b>{{ spec.key }}</b></td>
-            <td>{{ spec.value }}</td>
+            <td *ngIf="spec.key=='camera'">{{spec.value}}{{camera}}</td>
+            <td *ngIf="spec.key!='camera'">{{ spec.value }}</td>
           </tr>
         </table>
         <br>

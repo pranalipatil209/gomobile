@@ -13,6 +13,7 @@ export class MyProduct implements OnInit {
 
   constructor() { }
   @Input() prod: product;
+  camera = " MP";
 
   ngOnInit() {
 
