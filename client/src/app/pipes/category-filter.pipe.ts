@@ -20,6 +20,7 @@ export class CategoryFilterPipe implements PipeTransform {
       for (let j in filterby[i]) {
         console.log('j in filter[i] ', j);
         console.log('filterbr[i][j] ', filterby[i][j], filterby[i]);
+        console.log('count ',count);
         if (count > 0) {
           data.forEach(function (element) {
             console.log('element in foreach ', element);

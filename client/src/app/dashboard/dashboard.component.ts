@@ -9,19 +9,13 @@ import {SharedataService} from "../services/sharedata.service";
   styleUrls: ['./dashboard.component.css'],
   providers: [AuthService, SharedataService]
 })
-export class DashboardComponent{
+export class DashboardComponent {
 
-  constructor(private router: Router, private auth:AuthService, public share:SharedataService) { }
+  constructor(private router: Router, private auth:AuthService, public share:SharedataService) {}
 
   public data = JSON.parse(localStorage.getItem('prod'));
 
-
   filterBy():any{
       return this.share.getData();
-  }
-
-  logout():void{
-  	  console.log('log out');
-      this.auth.logout();
   }
 }
