@@ -18,6 +18,7 @@ import { CategoryFilterPipe } from './pipes/category-filter.pipe';
 import { OnlyKeysPipe } from './pipes/only-keys.pipe';
 import { BuyProductComponent } from './buy-product/buy-product.component';
 import { HomeComponent } from './home/home.component';
+import { StarsComponent } from './ratings/stars/stars.component';
 
 const appRoutes : Routes = [
     { path : '' , component : CanvasAreaComponent },
@@ -44,7 +45,8 @@ const appRoutes : Routes = [
     CategoryFilterPipe,
     OnlyKeysPipe,
     BuyProductComponent,
-    HomeComponent
+    HomeComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,

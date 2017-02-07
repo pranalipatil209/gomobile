@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { StarsComponent } from '../ratings/stars/stars.component';
 
 @Component({
   selector: 'buy-product,[buy-product]',
@@ -10,13 +11,13 @@ import { ActivatedRoute } from '@angular/router';
   export class BuyProductComponent implements OnInit, OnDestroy {
   product: any;
   private sub: any;
-
+  data : any;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      let data = params['q'];
-      this.product = JSON.parse(data);
+      this.data = params['q'];
+      this.product = JSON.parse(this.data);
     });
   }
 

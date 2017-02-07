@@ -1,0 +1,18 @@
+.stars{
+  margin-top: 200px;
+  height: 35px;
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.rate{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.rate > img{
+  width: 35px;
+  display: inline;
+  position: relative;
+}
