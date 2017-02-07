@@ -50,10 +50,9 @@ export class AuthService {
   }
 
   logout(): void{
-      window.onpopstate = function (e) { window.history.forward(0); };
       localStorage.clear();
       this.router.navigate(['']);
-
+      window.history.forward();
   }
 
 

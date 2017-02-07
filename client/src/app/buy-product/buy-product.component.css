@@ -23,9 +23,17 @@ img{
   background-color: rgba(255,255,255,0.6);
   top: 70px;
   text-align: center;
-  width : 100vw;
+  width : 100%;
   position: absolute;
   z-index: 1000;
+}
+
+.ratings{
+  margin-left: 13%;
+}
+
+.row{
+  text-align: center;
 }
 
 /*.stars{*/
