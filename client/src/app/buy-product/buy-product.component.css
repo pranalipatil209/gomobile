@@ -33,23 +33,63 @@ img{
 }
 
 .row{
-  text-align: center;
+  margin-top: 400px;
 }
 
-/*.stars{*/
-  /*margin-top: 200px;*/
-  /*height: 35px;*/
-  /*position: absolute;*/
-  /*display: inline-block;*/
-  /*white-space: nowrap;*/
-/*}*/
-
-/*.stars > img{*/
-  /*width: 35px;*/
-  /*position: relative;*/
-/*}*/
-
 p{
-  margin-top: 450px;
-  font-size: 17px;
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.col-md-6{
+  padding: 30px;
+}
+
+.head{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: -17px;
+}
+
+.name{
+  position: absolute;
+}
+
+.pull-right{
+  padding-right: 20px;
+}
+
+.wishlist{
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid #13CDFF;
+  color: #13CDFF;
+}
+
+.removeWishlist{
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid indianred;
+  color: indianred;
+}
+
+.Buy{
+  margin-top: 30px;
+  background-color: gold;
+  color: white;
+}
+
+.wishlist:hover {
+  background-color: #13CDFF;
+  color: white;
+}
+
+.removeWishlist:hover{
+  background-color: indianred;
+  color: white;
+}
+
+.values{
+  padding-left: 40px;
 }

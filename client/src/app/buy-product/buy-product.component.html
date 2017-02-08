@@ -7,11 +7,32 @@
     <ratings [rate]="product.rating"></ratings>
   </div>
   <div class="row">
-    <div class="col-md-6">
-      <p>hjdewhfjwedewfbejrjjjjj</p>
+    <div class="col-md-6 border">
+      <div>
+        <h3>Description</h3>
+        <hr>
+        <p>{{product.description}}</p>
+        <button class="btn btn-block wishlist">Add to Wishlist</button>
+        <button class="btn btn-block removeWishlist">Remove from Wishlist</button>
+      </div>
     </div>
     <div class="col-md-6">
-      <p>jehdjjfdhrj</p>
+      <div class="head">
+        <h3 class="name">{{product.name}}</h3>
+        <h3 class="pull-right">Price: ${{product.price}}</h3>
+      </div>
+      <hr>
+      <table>
+      <tr *ngFor="let i of product.specs | keys">
+        <td>
+          <h4>{{i.key}}</h4>
+        </td>
+        <td *ngIf="i.key=='camera'" class="values">{{i.value}}{{camera}}</td>
+        <td *ngIf="i.key=='storage'" class="values">{{i.value}}{{storage}}</td>
+        <td *ngIf="i.key != 'storage'" class="values"><span *ngIf="i.key != 'camera'">{{ i.value }}</span></td>
+      </tr>
+      </table>
+      <button class="btn btn-block Buy">Buy</button>
     </div>
   </div>
 </div>

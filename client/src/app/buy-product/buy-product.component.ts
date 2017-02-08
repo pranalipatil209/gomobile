@@ -13,7 +13,8 @@ import { StarsComponent } from '../ratings/stars/stars.component';
   private sub: any;
   data : any;
   constructor(private route: ActivatedRoute) {}
-
+  camera = " MP";
+  storage = " GB";
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.data = params['q'];
