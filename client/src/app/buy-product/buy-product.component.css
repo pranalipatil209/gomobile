@@ -55,8 +55,9 @@ p{
   position: absolute;
 }
 
-.pull-right{
-  padding-right: 20px;
+.price{
+  float: right;
+  padding-right: 10px;
 }
 
 .wishlist{
@@ -93,6 +94,20 @@ p{
   padding-left: 40px;
 }
 
+.money{
+  height: 50px;
+  width: 70px;
+  position: relative;
+  float: right;
+  padding-top: 5px;
+}
+
+.money > img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 @media only screen and (max-width: 500px){
   .image{
     margin-top: 50px;
@@ -103,5 +118,11 @@ p{
     font-size: 30px;
     top: 20px;
     width: 100vw;
+  }
+  .name{
+    position: relative;
+  }
+  .price{
+    float: left;
   }
 }
