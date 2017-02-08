@@ -39,3 +39,10 @@
    height: 30px;
    width: 30px;
  }
+
+ @media only screen and (max-width: 500px){
+  .loginDiv{
+    background-color: transparent;
+    box-shadow: none;
+  }
+ }
