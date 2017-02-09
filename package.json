@@ -2,7 +2,7 @@
   "name": "gomobile",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "dist/app.js",
+  "main": "dist/index.html",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
