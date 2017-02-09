@@ -6,8 +6,8 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "node app.js",
-    "preinstall" : "npm install -g node",
+    "start": "npm start",
+    "preinstall" : "npm install -g npm@3",
     "postinstall": "node_modules/.bin/bower install --allow-root",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
