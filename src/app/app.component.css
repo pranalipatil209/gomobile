@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('../assets/Myriad-Pro-Light_31642.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyriadPro-UltraLight';
+  src: url('../assets/myriad-set-pro-ultralight-5878628c2a32d.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  height: 100vh;
+  width: 100vw;
+  font-family: MyriadPro-Light;
+}
+
+.bag{
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 [hidden]{
   display: none !important;
 }

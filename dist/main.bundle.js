@@ -1093,7 +1093,7 @@ var environment = {
 /***/ 672:
 /***/ function(module, exports) {
 
-module.exports = "[hidden]{\n  display: none !important;\n}\n"
+module.exports = "@font-face {\n  font-family: 'MyriadPro-Light';\n  src: url('../assets/Myriad-Pro-Light_31642.ttf') format('truetype');\n  font-weight: normal;\n  font-style: normal;\n}\n\n@font-face {\n  font-family: 'MyriadPro-UltraLight';\n  src: url('../assets/myriad-set-pro-ultralight-5878628c2a32d.ttf') format('truetype');\n  font-weight: normal;\n  font-style: normal;\n}\n\n\nbody{\n  height: 100vh;\n  width: 100vw;\n  font-family: MyriadPro-Light;\n}\n\n.bag{\n  height: 100vh;\n  width: 100vw;\n  background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n[hidden]{\n  display: none !important;\n}\n"
 
 /***/ },
 
@@ -1114,7 +1114,7 @@ module.exports = ".myrow {\n\ttext-align: center;\n\twidth: 100vw;\n\ttext-align
 /***/ 675:
 /***/ function(module, exports) {
 
-module.exports = "@import url(../../styles.css);\n.navbar-inverse .navbar-collapse {\n  background-color: black;\n}\n\na.navbar-brand{\n  font-family: MyriadPro-Light;\n  font-weight: 400;\n  font-size: 22px;\n  color : white;\n}\na.navbar-brand:hover{\n  color : greenyellow;\n}\n\n.col-xs-9{\n  width: 80%;\n}\n\n.contain {\n  margin-top: 60px;\n  margin-left: 2%;\n  display: inline-block;\n  /*width : 950px;*/\n}\n\n@media screen and (max-width:768px) {\n  a.navbar-brand{\n    font-size: 18px;\n  }\n  nav{\n    height: 50px;\n  }\n}\n@media screen and (max-width:480px) {\n  a.navbar-brand{\n    font-size: 14px;\n  }\n  nav{\n    height: 50px;\n  }\n  .contain{\n    /*width : 300px;*/\n  }\n}\n@media screen and (min-width:501px) and (max-width:780px) {\n  .contain {\n    padding-left: 50px;\n    /*width : 600px;*/\n  }\n}\n"
+module.exports = ".navbar-inverse .navbar-collapse {\n  background-color: black;\n}\n\na.navbar-brand{\n  font-family: MyriadPro-Light;\n  font-weight: 400;\n  font-size: 22px;\n  color : white;\n}\na.navbar-brand:hover{\n  color : greenyellow;\n}\n\n.col-xs-9{\n  width: 80%;\n}\n\n.contain {\n  margin-top: 60px;\n  margin-left: 2%;\n  display: inline-block;\n  /*width : 950px;*/\n}\n\n@media screen and (max-width:768px) {\n  a.navbar-brand{\n    font-size: 18px;\n  }\n  nav{\n    height: 50px;\n  }\n}\n@media screen and (max-width:480px) {\n  a.navbar-brand{\n    font-size: 14px;\n  }\n  nav{\n    height: 50px;\n  }\n  .contain{\n    /*width : 300px;*/\n  }\n}\n@media screen and (min-width:501px) and (max-width:780px) {\n  .contain {\n    padding-left: 50px;\n    /*width : 600px;*/\n  }\n}\n"
 
 /***/ },
 

@@ -2,19 +2,15 @@
   "name": "gomobile",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "dist/index.html",
   "angular-cli": {},
   "scripts": {
-    "start": "http-server",
+    "start": "http-server dist/",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
     "preinstall": "npm install -g http-server",
-    "postinstall": "ng build && mv dist/* ."
-  },
-  "engines": {
-    "node": "4.1.1"
+    "postinstall": "ng build && mv src/styles.css dist/"
   },
   "private": true,
   "dependencies": {
@@ -46,7 +42,7 @@
     "tslint": "^4.0.2",
     "typescript": "~2.0.3",
     "webdriver-manager": "10.2.5",
-    "webpack": "^2.2.1",
+    "webpack": "^2.2.0",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {}
