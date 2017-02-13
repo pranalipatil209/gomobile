@@ -1,0 +1,30 @@
+@font-face {
+	  font-family: 'MyriadPro-Light';
+	  src: url(b58491710f8752142d06a0cbae7f1c90.ttf) format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+@font-face {
+	  font-family: 'MyriadPro-UltraLight';
+	  src: url(b139556454aede8e815e44366e0020f2.ttf) format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+
+body{
+	height: 100vh;
+	width: 100vw;
+	font-family: MyriadPro-Light;
+}
+
+.bag{
+	height: 100vh;
+	width: 100vw;
+	background: -webkit-gradient(linear, left top, right top, from(#12E8DD), to(#13CDFF));
+	background-repeat: no-repeat;
+ background-size: cover;
+}
+
+/*# sourceMappingURL=styles.bundle.map*/
