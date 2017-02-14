@@ -53,9 +53,9 @@ const appRoutes : Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { useHash: true })
   ],
-  providers : [AuthService, LoginRequireResolver],
+  providers : [AuthService, LoginRequireResolver, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
