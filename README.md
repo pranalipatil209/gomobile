@@ -1,6 +1,14 @@
-# Client
+# GoMobile
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+It is a demo App using Angular for frontend and NodeJS for backend. This project is generated with [angular-cli]
+(https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+
+Backend :
+    <li>Github link - [a link](https://github.com/pranalipatil209/meanApp.git)</li>
+    <li>URL - [a link](http://choco-lava.herokuapp.com/)</li>
+
+## Demo
+live demo : [a link](https://gomobile.herokuapp.com)
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
