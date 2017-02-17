@@ -27,8 +27,8 @@ const appRoutes : Routes = [
     { path : 'home' , component : HomeComponent ,
       resolve : { loginRequire : LoginRequireResolver },
       children : [
-        { path : '' , component : DashboardComponent },
-        { path : 'product' , component : BuyProductComponent }
+        { path : '' , component : DashboardComponent, resolve : { loginRequire : LoginRequireResolver }},
+        { path : 'product' , component : BuyProductComponent, resolve : { loginRequire : LoginRequireResolver } }
       ]},
 ];
 
