@@ -33,7 +33,12 @@ export class SignupComponent{
 		  this.load = false;
 			let data = res.json();
 			console.log(data);
-			this.router.navigate(['/login']);
+			if(data.data == "User already exist!"){
+				alert(data.data);
+			}
+			else{
+				this.router.navigate(['/login']);
+			}
 		})
 	}
 
