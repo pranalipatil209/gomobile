@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   }
 
   logout():void{
-    console.log('log out');
     this.auth.logout();
   }
 

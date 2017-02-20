@@ -18,21 +18,17 @@ export class SignupComponent{
 		this.signUpForm = fb.group({
 			'name' : [null, Validators.required],
 			'email' : [null,Validators.required],
-			'mobile' : [null, Validators.compose([Validators.required, Validators.minLength(10),Validators.minLength(10)])],
+			'mobile' : [null, Validators.compose([Validators.required, Validators.minLength(10)])],
 			'password' : [null, Validators.compose([Validators.required, Validators.minLength(8)])]
 		})
 	}
 
 	submitForm(value:any):void{
 	  this.load = true;
-		console.log('Form Data : ');
-		console.log(value);
 
 		this.http.post('https://choco-lava.herokuapp.com/api/signup',value).subscribe(
 		(res:any)=>{
 		  this.load = false;
-			let data = res.json();
-			console.log(data);
 			this.router.navigate(['/login']);
 		})
 	}

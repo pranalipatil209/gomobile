@@ -11,11 +11,9 @@ export class CanvasAreaComponent{
 	constructor(private router:Router){}
 
  	signup():void{
- 		console.log('Signup click');
  		this.router.navigate(['/signup']);
  	}
  	login():void{
- 		console.log('Login click');
  		this.router.navigate(['/login']);
  	}
 

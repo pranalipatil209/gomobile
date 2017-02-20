@@ -1,48 +1,51 @@
 .contains {
-	position: absolute;
-   	top: 50%;
-   	margin-top: -200px;/* half of #content height*/
-   	width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -200px; /* half of #content height*/
+    width: 100%;
 }
+
 .loginDiv {
-	width : 300px;
-	margin: auto;
-	border-radius: 5px;
-	background-color: rgba(255,255,255,0.5);
-	box-shadow: 0px 2px 5px;
-	padding: 20px;
+    width: 300px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 5px;
+    padding: 20px;
 }
 
 .loginForm > input {
-	width : 100%;
+    width: 100%;
 
 }
- .buttn {
- 	height : 40px;
- 	border-radius: 5px;
- 	border: 0px solid;
- }
 
- .danger {
- 	text-align: center;
- 	font-size: 11px;
- 	color: red;
- }
+.buttn {
+    height: 40px;
+    border-radius: 5px;
+    border: 0px solid;
+    margin-top: 35px;
+}
 
- .loader {
-   margin: auto;
- }
+.danger {
+    text-align: center;
+    font-size: 11px;
+    color: firebrick;
+}
 
- .loaderImg {
-   margin-left: 45%;
-   margin-bottom: 5px;
-   height: 30px;
-   width: 30px;
- }
+.loader {
+    margin: auto;
+}
 
- @media only screen and (max-width: 500px){
-  .loginDiv{
-    background-color: transparent;
-    box-shadow: none;
-  }
- }
+.loaderImg {
+    margin-left: 45%;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+    .loginDiv {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

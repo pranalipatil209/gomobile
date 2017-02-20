@@ -5,12 +5,16 @@
 		<div class="LoginForm">
 			<form [formGroup]="loginForm" novalidate (ngSubmit)="submitForm(loginForm.value)">
 
-				<div class="form-group" [ngClass]="{'has-error':!loginForm.controls['email'].valid && !loginForm.controls['email'].touched}">
-					<input class="form-control" type="email" name="email" [formControl]="loginForm.controls['email']" placeholder="email" required>
+				<div class="form-group"
+					 [ngClass]="{'has-error':!loginForm.controls['email'].valid && loginForm.controls['email'].dirty}">
+					<input class="form-control textfield" type="email" name="email"
+						   [formControl]="loginForm.controls['email']" placeholder="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
 				</div>
 
-				<div class="form-group" [ngClass]="{'has-error':!loginForm.controls['password'].valid && !loginForm.controls['password'].touched}">
-					<input class="form-control" type="password" name="password" [formControl]="loginForm.controls['password']" placeholder="password" required>
+				<div class="form-group"
+					 [ngClass]="{'has-error':!loginForm.controls['password'].valid && loginForm.controls['password'].dirty}">
+					<input class="form-control textfield" type="password" name="password"
+						   [formControl]="loginForm.controls['password']" placeholder="password" required>
 				</div>
 
 				<div class="form-group">
@@ -20,8 +24,11 @@
           <img class="loaderImg" src="../../assets/load.gif">
         </div>
         <div class="danger" #errorLogin *ngIf="loginForm.valid"></div>
-				<div class="danger" *ngIf="!loginForm.controls['email'].valid">Invalid email!</div>
-				<div class="danger" *ngIf="!loginForm.controls['password'].valid">Invalid Password!</div>
+				<div class="danger"
+					 *ngIf="!loginForm.controls['email'].valid && loginForm.controls['email'].touched">Invalid
+					email!</div>
+				<div class="danger"
+					 *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].touched">Invalid Password!</div>
 			</form>
 		</div>
 	</div>

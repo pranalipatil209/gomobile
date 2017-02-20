@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit{
 
 	submitForm(value:any):void {
 	    this.load = true;
-      console.log('Login Form ',value);
       this.auth.login('login',value)
           .subscribe(res=>{
               this.load = false;

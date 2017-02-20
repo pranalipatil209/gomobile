@@ -21,7 +21,6 @@ export class AuthService {
                   localStorage.setItem('token',data.result._token);
               return data;
           });
-      console.log(response);
       return response;
   }
 
@@ -34,7 +33,6 @@ export class AuthService {
 
   loginRequired(): Promise<any>{
     if(this.isAuthenticated()) {
-      console.log('Authenticated');
       return Promise.resolve();
     }
     else {
