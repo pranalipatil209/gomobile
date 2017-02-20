@@ -29,7 +29,18 @@ export class SignupComponent{
 		this.http.post('https://choco-lava.herokuapp.com/api/signup',value).subscribe(
 		(res:any)=>{
 		  this.load = false;
+<<<<<<< HEAD
 			this.router.navigate(['/login']);
+=======
+			let data = res.json();
+			console.log(data);
+			if(data.data == "User already exist!"){
+				alert(data.data);
+			}
+			else{
+				this.router.navigate(['/login']);
+			}
+>>>>>>> 24043714ca7bb52d8978c0d8fea998db910e92a0
 		})
 	}
 
