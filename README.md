@@ -4,7 +4,7 @@ It is a demo App using Angular for frontend and NodeJS for backend. This project
 (https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 Backend
-    <li>Github link - <a>https://github.com/pranalipatil209/meanApp.git</a></li>
+    <li>Github link - <a>https://github.com/pranalipatil209/chocolava.git</a></li>
     <li>URL - <a>http://choco-lava.herokuapp.com/</a></li>
 
 ## Demo

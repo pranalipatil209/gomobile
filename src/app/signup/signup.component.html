@@ -1,53 +1,59 @@
 <div class="bag">
-<div class="container-fluid contains">
-	<div class="signupDiv">
-		<h3 class="text-center">Signup</h3>
-		<div class="SignForm">
-			<form [formGroup]="signUpForm" (ngSubmit)="submitForm(signUpForm.value)">
-				<div class="form-group"
-					 [ngClass]="{'has-error':!signUpForm.controls['name'].valid && signUpForm.controls['name'].dirty}">
-					<input class="form-control textfield" type="text" name="name" placeholder="Name"
-						   [formControl]="signUpForm.controls['name']" required>
-				</div>
+    <div class="container-fluid contains">
+        <div class="signupDiv">
+            <h3 class="text-center">Signup</h3>
+            <div class="SignForm">
+                <form [formGroup]="signUpForm" (ngSubmit)="submitForm(signUpForm.value)">
+                    <div class="form-group"
+                         [ngClass]="{'has-error':!signUpForm.controls['name'].valid && signUpForm.controls['name'].dirty}">
+                        <input class="form-control textfield" type="text" name="name" placeholder="Name"
+                               [formControl]="signUpForm.controls['name']" required>
+                    </div>
 
-				<div class="form-group"
-					 [ngClass]="{'has-error':!signUpForm.controls['email'].valid && signUpForm.controls['email'].dirty}">
-					<input class="form-control textfield" type="email" name="email"
-						   [formControl]="signUpForm.controls['email']" placeholder="Email"
-						   pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
-				</div>
+                    <div class="form-group"
+                         [ngClass]="{'has-error':!signUpForm.controls['email'].valid && signUpForm.controls['email'].dirty}">
+                        <input class="form-control textfield" type="email" name="email"
+                               [formControl]="signUpForm.controls['email']" placeholder="Email"
+                               pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    </div>
 
-				<div class="form-group"
-					 [ngClass]="{'has-error':!signUpForm.controls['mobile'].valid && signUpForm.controls['mobile'].dirty}">
-					<input class="form-control textfield" type="text" name="mobile"
-						   [formControl]="signUpForm.controls['mobile']" placeholder="Mobile"
-						   pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" required>
-				</div>
+                    <div class="form-group"
+                         [ngClass]="{'has-error':!signUpForm.controls['mobile'].valid && signUpForm.controls['mobile'].dirty}">
+                        <input class="form-control textfield" type="text" name="mobile"
+                               [formControl]="signUpForm.controls['mobile']" placeholder="Mobile"
+                               pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" required>
+                    </div>
 
-				<div class="form-group"
-					 [ngClass]="{'has-error':!signUpForm.controls['password'].valid && signUpForm.controls['password'].dirty}">
-					<input class="form-control textfield" type="password" name="password"
-						   [formControl]="signUpForm.controls['password']" placeholder="Password" required>
-				</div>
+                    <div class="form-group"
+                         [ngClass]="{'has-error':!signUpForm.controls['password'].valid && signUpForm.controls['password'].dirty}">
+                        <input class="form-control textfield" type="password" name="password"
+                               [formControl]="signUpForm.controls['password']" placeholder="Password" required>
+                    </div>
 
-				<div class="form-group">
-					<button class="btn-block btn-primary buttn" [disabled]="!signUpForm.valid" type="submit">Register</button>
-				</div>
-        <div class="loader" *ngIf="load==true">
-          <img class="loaderImg" src="../../assets/load.gif">
+                    <div class="form-group">
+                        <button class="btn-block btn-primary buttn" [disabled]="!signUpForm.valid" type="submit">
+                            Register
+                        </button>
+                    </div>
+                    <div class="loader" *ngIf="load==true">
+                        <img class="loaderImg" src="../../assets/load.gif">
+                    </div>
+                    <div class="danger"
+                         *ngIf="!signUpForm.controls['email'].valid && signUpForm.controls['email'].touched">Invalid
+                        email
+                    </div>
+                    <div class="danger"
+                         *ngIf="!signUpForm.controls['mobile'].valid && signUpForm.controls['mobile'].touched">Invalid
+                        Mobile number
+                    </div>
+                    <div class="danger"
+                         *ngIf="!signUpForm.controls['password'].valid && signUpForm.controls['password'].touched">
+                        Password
+                        should contain minimum 8
+                        characters
+                    </div>
+                </form>
+            </div>
         </div>
-				<div class="danger"
-					 *ngIf="!signUpForm.controls['email'].valid && signUpForm.controls['email'].touched">Invalid
-					email</div>
-				<div class="danger"
-					 *ngIf="!signUpForm.controls['mobile'].valid && signUpForm.controls['mobile'].touched">Invalid
-					Mobile number</div>
-				<div class="danger"
-					 *ngIf="!signUpForm.controls['password'].valid && signUpForm.controls['password'].touched">Password
-					should contain minimum 8
-					characters</div>
-			</form>
-		</div>
-	</div>
-</div>
+    </div>
 </div>
